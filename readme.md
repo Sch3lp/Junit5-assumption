@@ -1,9 +1,11 @@
 Assertions :
 * group assertions (check always the whole group)
 * timeout assertions
+
 Assumptions :
 * early termination of test based on a conditional
 * integrates with intellij as if test is ignored (when assumption fails)
+
 Tags : add annotation : test plan based on those
 
 Assertions
