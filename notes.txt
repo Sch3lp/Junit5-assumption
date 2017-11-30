@@ -1,21 +1,35 @@
 
 Assertions
 https://howtodoinjava.com/junit-5/junit-5-assertions-examples/
-
-void testCase()
-{
-    //Test will pass
-    Assertions.assertEquals(4, Calculator.add(2, 2));
+ 
+ @Test
+void testCase() {
+ 
+    boolean trueBool = true;
+    boolean falseBool = false;
+ 
+    Assertions.assertTrue(trueBool);
+    Assertions.assertTrue(falseBool, "test execution message");
+    Assertions.assertTrue(falseBool, AppTest::message);
+    Assertions.assertTrue(AppTest::getResult, AppTest::message);
      
-    //Test will fail
-    Assertions.assertEquals(3, Calculator.add(2, 2), "Calculator.add(2, 2) test failed");
-     
-    //Test will fail
-     Supplier&lt;String&gt; messageSupplier  = ()-> "Calculator.add(2, 2) test failed";
-    Assertions.assertEquals(3, Calculator.add(2, 2), messageSupplier);
- }
+    Assertions.assertFalse(falseBool);
+    Assertions.assertFalse(trueBool, "test execution message");
+    Assertions.assertFalse(trueBool, AppTest::message);
+    Assertions.assertFalse(AppTest::getResult, AppTest::message);
+}
 
+@Test
+void allAssertions() {
 
+assertAll("cart",
+
+    ()-assertEquals("Shirt",cart.getItemName()),
+    ()-assertEquals("White",cart.getItemColor())
+
+);
+}
+ 
 
  Assumptions
  https://howtodoinjava.com/junit-5/junit-5-assumptions-examples/
