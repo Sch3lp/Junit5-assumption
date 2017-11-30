@@ -1,7 +1,7 @@
 Assertions :
 * group assertions (check always the whole group) : interesting
 * timeout assertions : maybe
-* dependent assertions ?
+* dependent assertions : seems nothing new
 
 Assumptions :
 * early termination of test based on a conditional
