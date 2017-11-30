@@ -1,3 +1,7 @@
+Assertions : new assertions, group assertions (check always the whole group)
+Assumptions : run test based on conditions
+Tags : add meta data : test plan based on thoses
+
 
 Assertions
 https://howtodoinjava.com/junit-5/junit-5-assertions-examples/
