@@ -1,1 +1,42 @@
 
+Assertions
+https://howtodoinjava.com/junit-5/junit-5-assertions-examples/
+
+void testCase()
+{
+    //Test will pass
+    Assertions.assertEquals(4, Calculator.add(2, 2));
+     
+    //Test will fail
+    Assertions.assertEquals(3, Calculator.add(2, 2), "Calculator.add(2, 2) test failed");
+     
+    //Test will fail
+     Supplier&lt;String&gt; messageSupplier  = ()-> "Calculator.add(2, 2) test failed";
+    Assertions.assertEquals(3, Calculator.add(2, 2), messageSupplier);
+ }
+
+
+
+ Assumptions
+ https://howtodoinjava.com/junit-5/junit-5-assumptions-examples/
+ 
+     @Test
+     void testOnDev()
+     {
+         System.setProperty("ENV", "DEV");
+         Assumptions.assumeTrue("DEV".equals(System.getProperty("ENV")));
+         //remainder of test will proceed
+     }
+ 
+
+ Tags
+ https://howtodoinjava.com/junit-5/junit-5-tag-annotation-example/
+ 
+ @Tag("development")
+ public class ClassATest
+ {
+     @Test
+     @Tag("userManagement")
+     void testCaseA(TestInfo testInfo) {
+     }
+ }
