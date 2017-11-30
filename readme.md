@@ -11,8 +11,9 @@ Tags : add annotation : test plan based on those
 
 Assertions
 https://howtodoinjava.com/junit-5/junit-5-assertions-examples/
- 
- @Test
+
+```
+@Test
 void testCase() {
  
     boolean trueBool = true;
@@ -75,5 +76,5 @@ assertAll("cart",
 public class JUnit5Example
 {
 }
-
+```
 Geen project voor Selenium / niet snel test hebben
