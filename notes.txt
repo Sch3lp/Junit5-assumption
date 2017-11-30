@@ -27,6 +27,8 @@ void testCase()
          Assumptions.assumeTrue("DEV".equals(System.getProperty("ENV")));
          //remainder of test will proceed
      }
+     
+     Maatwerk testen
  
 
  Tags
@@ -40,3 +42,14 @@ void testCase()
      void testCaseA(TestInfo testInfo) {
      }
  }
+ 
+ //@IncludeTags example
+ 
+@RunWith(JUnitPlatform.class)
+@SelectPackages("com.howtodoinjava.junit5.examples")
+@IncludeTags("production")
+public class JUnit5Example
+{
+}
+
+Geen project voor Selenium / niet snel test hebben
